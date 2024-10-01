@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QS-CONTROL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/Mada/Mada-VariableFont_wght.ttf">
+    
+</head>
+<body>
+    <img id="bg" src="images/wallpape.jpeg" alt="">
+    <section class="container">
+        <img src="images/icons/list.png" class="list" id="list"/>
+        <aside>
+            <header class="logo">
+                <img src="images/logo.jpg" alt="">
+            </header>
+            <div class="inputs">
+                <div class="input">
+                    <div class="chC ">عيادة 1</div>
+                    <div class="chC ">عيادة 2</div>
+                </div>
+                <div name="" id="docselect" class="input drs-sel">
+                    <span class="dr-data" id="dr-list" >الطبيب</span>
+                    <!-- <span class="dr-data" id="dep-list" >التخصص</span> -->
+                    <div class="drs-list list-g" id="drs-list">
+                        <span class="dr-d">دكتور/ يوسف عزالرجال</span>
+                        <span class="dr-d">دكتور/ يوسف محمد يوسف</span>
+                        <span class="dr-d">دكتور/ محمد دسوقي</span>
+                        <span class="dr-d">دكتور/ أحمد فوزي</span>
+                        <span class="dr-d">دكتور/ سامح نصار</span>
+                        <span class="dr-d">دكتور/ كمال نجيب</span>
+                        <span class="dr-d">دكتور/ أحمد محمد العريان</span>
+                        <span class="dr-d">دكتور/ أحمد ثروت</span>
+                        <span class="dr-d">دكتور/ محمد عبد الحميد</span>
+                        <span class="dr-d">دكتور/ صالح محمد صالح</span>
+                        <span class="dr-d">دكتور/ شريف عمر</span>
+                    </div>
+                    <div class="deps-list list-g" id="deps-list">
+                        <span class="dr-d">استشاري الحقن المجهري والحمل الحرج والاجهاض المتكرر</span>
+                        <span class="dr-d">أخصائي أمراض النسا و التوليد و جراحات المناظير و الحقن المجهري</span>
+                        <span class="dr-d">استشاري الحقن المجهري والمناظير الجراحية</span>
+                        <span class="dr-d">أستاذ و استشاري علاج العقم للزوجين كلية طب الاسكندرية</span>
+                        <span class="dr-d">استشاري أمراض الذكورة و العقم و الضعف الجنسي</span>
+                        <span class="dr-d">استشاري الامراض الوراثية</span>
+                        <span class="dr-d">مدرس و استشاري أمراض النسا و التوليد كلية طب الاسكندرية</span>
+                        <span class="dr-d">أستاذ التوليد و أمراض النسا و المناظير و الحقن المجهري بكلية الطب</span>
+                        <span class="dr-d">استشاري الحقن المجهري و جراحة المناظير</span>
+                        <span class="dr-d">استشاري أمراض النسا و التوليد و الحقن المجهري و المناظير و أخصائي طب الجنين</span>
+                        <span class="dr-d">استشاري أمراض النسا و التوليد و الحقن المجهري و تأخر الحمل</span>
+                    </div>
+                </div>
+                <!-- <option value=""> دكتور/ يوسف عزالرجال</option>
+                <option value=""> دكتور/ محمد دسوقي</option> -->
+                <!-- <div name="" id="depselelct" class="input">
+                    
+                </div> -->
+                    <!-- <option value="استشاري">استشاري الحقن المجهري و الحمل الحرج و الاجهاد المتكرر</option>
+                    <option value="استشاري">استشاري الحقن المجهري و المناظير الجراحية</option> -->
+                <input type="text" class="input" placeholder="الاسم" id="thename" >
+                <div class="input btn-opt" >
+                    <span class="myn" id="add" onclick="addPatient(this)">اضافة</span>
+                    <a class="myn" id="show" href="screen.html" target="_blank"></a>
+                </div>
+            </div>
+        </aside>
+        <section class="clinic clinic1">
+            <div class="head">
+                <span class="clinicnum">
+                    عيادة رقم (1)
+                </span>
+                <span class="dr" id="drname1"></span>
+                <span class="spec" id="depart1"></span>
+            </div>
+            <div class="table" id="table-1">
+                <div class="table-head">
+                    <span class="pat-num">م</span>
+                    <span class="pat-name">اسم المريض</span>
+                    <span class="pat-opt">الاختيارات</span>
+                </div>
+                <div id="cont"></div>
+            </div>
+            <div class="btns">
+                <span class="btn" id="next1" >ابـــدا</span>
+                <span class="btn deleteall" id="deleteall1" onclick="removeAll()">حذف الكل</span>
+            </div>
+        </section>
+        <section class="clinic clinic2">
+            <div class="head">
+                <span class="clinicnum">
+                    عيادة رقم (2)
+                </span>
+                <span class="dr" id="drname2"></span>
+                <span class="spec" id="depart2"></span>
+            </div>
+            <div class="table" id="table-2">
+                <div class="table-head">
+                    <span class="pat-num">م</span>
+                    <span class="pat-name">اسم المريض</span>
+                    <span class="pat-opt">الاختيارات</span>
+                </div>
+                <div id="cont"></div>
+            </div>
+            <div class="btns">
+                <span class="btn" id="next2" >ابـــدا</span>
+                <span class="btn deleteall" id="deleteall2" onclick="removeAll()">حذف الكل</span>
+            </div>
+        </section>
+        <audio src="sounds/1.mp3" id="sound1"/>
+        <audio src="sounds/2.mp3" id="sound2"/>
+    </section>
+</body>
+<script src="js/main.js"></script>
+</html>
